@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="et"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Enkirai: teine mõistus sinu kõrvas</title>
+<meta name="description" content="Enkirai kuulab vestlust ja sosistab vastuseid ning vihjeid kõrvaklappi, pärast koostab märkmed ja ülesanded."><meta name="theme-color" content="#07080c">
+<meta property="og:title" content="Enkirai: teine mõistus sinu kõrvas"><meta property="og:description" content="Enkirai kuulab vestlust ja sosistab vastuseid ning vihjeid kõrvaklappi, pärast koostab märkmed ja ülesanded.">
+<meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/et/">
+<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><div class="wrap"><nav><a class="logo" href="/et/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="" href="/lt/">LT</a><a class="" href="/pl/">PL</a><a class="" href="/lv/">LV</a><a class="on" href="/et/">ET</a></div></nav></div>
+<div class="wrap"><section class="hero"><div>
+<div class="eyebrow">Reaalajas vestlusabiline</div><h1>Teine mõistus<br>sinu kõrvas.</h1><p class="sub">Enkirai kuulab kohtumist, kõnet või läbirääkimisi ja sosistab ~1,7 sekundiga vastuse kõrvaklappi. Pärast vestlust on märkmed ja ülesanded valmis.</p>
+<form id="w"><div class="row"><input type="email" name="email" required placeholder="Sinu e-post" autocomplete="email"><button>Liitu ootenimekirjaga</button></div>
+<label class="chk"><input type="checkbox" name="test">Tahan esimesena testida</label><div class="msg" id="m" aria-live="polite"></div>
+<div class="soon">Peagi Google Plays</div></form></div>
+<div class="phone"><img src="/img/et-hero.webp" alt="Enkirai"></div></section>
+<section class="grid"><div class="card"><h3>Vastused kõrva</h3><p>Keegi küsib fakti, hinda, detaili. Lühike vastus on kõrvaklapis enne, kui paus muutub piinlikuks.</p></div><div class="card"><h3>Vihjed, mitte skriptid</h3><p>Kui küsitakse sinu hinna või kogemuse kohta, saad suuna oma kontekstist, mõne sõnaga.</p></div><div class="card"><h3>Otsib sinu eest</h3><p>Puuduta kõrvaklappi kaks korda ja Enkirai otsib internetist, kontaktidest või kalendrist.</p></div><div class="card"><h3>Märkmed 10 sekundiga</h3><p>Kokkuvõte, otsused, ülesanded vastutajate ja tähtaegadega. Kopeeri kõik ühe puudutusega.</p></div></section>
+<section class="band"><div class="card"><h2>Kuidas see töötab</h2><ol><li>Pane telefon lauale, üks kõrvaklapp kõrva.</li><li>Puuduta kera või vajuta helitugevust üles, siis alla.</li><li>Räägi. Enkirai aitab ainult siis, kui tasub.</li></ol></div>
+<div class="card"><h2>5 keelt</h2><p>Leedu, inglise, poola, läti ja eesti keel, isegi kui need ühes vestluses segunevad.</p></div>
+<div class="card"><h2>Privaatsus eelkõige</h2><p>Transkriptsioonid jäävad sinu telefoni. Reklaame pole, andmeid ei müüda. Ütle vestluskaaslastele, et teed märkmeid AI-ga.</p></div></section>
+<section class="shots"><img loading="lazy" src="/img/et-1.webp" alt=""><img loading="lazy" src="/img/et-2.webp" alt=""><img loading="lazy" src="/img/et-3.webp" alt=""><img loading="lazy" src="/img/et-4.webp" alt=""><img loading="lazy" src="/img/et-5.webp" alt=""></section></div><div class="wrap"><footer><div><a href="/privacy/">Privaatsuspoliitika</a><a href="/terms/">Tingimused</a><a href="/delete/">Kustuta konto</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · m.labs toode</div></footer></div><script>
+const f=document.getElementById('w'),m=document.getElementById('m');
+f.addEventListener('submit',async e=>{e.preventDefault();m.textContent='…';
+ try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{'apikey':'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Authorization':'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json','Prefer':'return=minimal'},
+ body:JSON.stringify({email:f.email.value.trim(),lang:'et',wants_test:f.test.checked})});
+ m.textContent=r.ok?"Oled nimekirjas. Kirjutame, kui valmis.":(r.status===409?"Oled juba nimekirjas.":"Midagi l\u00e4ks valesti. Proovi uuesti.");if(r.ok)f.reset();}catch(_){m.textContent="Midagi l\u00e4ks valesti. Proovi uuesti.";}});
+</script></body></html>

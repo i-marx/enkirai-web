@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="lv"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Enkirai: otrs prāts tavā ausī</title>
+<meta name="description" content="Enkirai klausās sarunu un čukst atbildes un padomus austiņā, pēc tam sagatavo piezīmes un uzdevumus."><meta name="theme-color" content="#07080c">
+<meta property="og:title" content="Enkirai: otrs prāts tavā ausī"><meta property="og:description" content="Enkirai klausās sarunu un čukst atbildes un padomus austiņā, pēc tam sagatavo piezīmes un uzdevumus.">
+<meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/lv/">
+<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><div class="wrap"><nav><a class="logo" href="/lv/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="" href="/lt/">LT</a><a class="" href="/pl/">PL</a><a class="on" href="/lv/">LV</a><a class="" href="/et/">ET</a></div></nav></div>
+<div class="wrap"><section class="hero"><div>
+<div class="eyebrow">Tiešraides sarunu asistents</div><h1>Otrs prāts<br>tavā ausī.</h1><p class="sub">Enkirai klausās tikšanos, zvanu vai pārrunas un ~1,7 sekundēs iečukst atbildi austiņā. Pēc sarunas piezīmes un uzdevumi jau gatavi.</p>
+<form id="w"><div class="row"><input type="email" name="email" required placeholder="Tavs e-pasts" autocomplete="email"><button>Pierakstīties</button></div>
+<label class="chk"><input type="checkbox" name="test">Gribu testēt pirmais</label><div class="msg" id="m" aria-live="polite"></div>
+<div class="soon">Drīzumā Google Play</div></form></div>
+<div class="phone"><img src="/img/lv-hero.webp" alt="Enkirai"></div></section>
+<section class="grid"><div class="card"><h3>Atbildes ausī</h3><p>Kāds pajautā faktu, cenu, detaļu. Īsa atbilde ir austiņā, pirms pauze kļūst neveikla.</p></div><div class="card"><h3>Padomi, nevis scenāriji</h3><p>Kad jautā par tavu cenu vai pieredzi, saņem virzienu no sava konteksta, dažos vārdos.</p></div><div class="card"><h3>Atrod tavā vietā</h3><p>Divreiz pieskaries austiņai, un Enkirai meklē internetā, kontaktos vai kalendārā.</p></div><div class="card"><h3>Piezīmes 10 sekundēs</h3><p>Kopsavilkums, lēmumi, uzdevumi ar atbildīgajiem un termiņiem. Visu nokopē ar vienu pieskārienu.</p></div></section>
+<section class="band"><div class="card"><h2>Kā tas strādā</h2><ol><li>Noliec telefonu uz galda, vienu austiņu ausī.</li><li>Pieskaries lodei vai nospied skaļumu uz augšu, tad uz leju.</li><li>Runā. Enkirai palīdz tikai tad, kad ir vērts.</li></ol></div>
+<div class="card"><h2>5 valodas</h2><p>Lietuviešu, angļu, poļu, latviešu un igauņu, pat ja tās jaucas vienā sarunā.</p></div>
+<div class="card"><h2>Privātums pirmajā vietā</h2><p>Transkripcijas paliek tavā telefonā. Bez reklāmām, bez datu pārdošanas. Pasaki sarunu biedriem, ka veic piezīmes ar AI.</p></div></section>
+<section class="shots"><img loading="lazy" src="/img/lv-1.webp" alt=""><img loading="lazy" src="/img/lv-2.webp" alt=""><img loading="lazy" src="/img/lv-3.webp" alt=""><img loading="lazy" src="/img/lv-4.webp" alt=""><img loading="lazy" src="/img/lv-5.webp" alt=""></section></div><div class="wrap"><footer><div><a href="/privacy/">Privātuma politika</a><a href="/terms/">Noteikumi</a><a href="/delete/">Dzēst kontu</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · m.labs produkts</div></footer></div><script>
+const f=document.getElementById('w'),m=document.getElementById('m');
+f.addEventListener('submit',async e=>{e.preventDefault();m.textContent='…';
+ try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{'apikey':'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Authorization':'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json','Prefer':'return=minimal'},
+ body:JSON.stringify({email:f.email.value.trim(),lang:'lv',wants_test:f.test.checked})});
+ m.textContent=r.ok?"Tu esi sarakst\u0101. Uzrakst\u012bsim, kad b\u016bs gatavs.":(r.status===409?"Tu jau esi sarakst\u0101.":"Kaut kas nog\u0101ja greizi. M\u0113\u0123ini v\u0113lreiz.");if(r.ok)f.reset();}catch(_){m.textContent="Kaut kas nog\u0101ja greizi. M\u0113\u0123ini v\u0113lreiz.";}});
+</script></body></html>

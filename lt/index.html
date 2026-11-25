@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="lt"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Enkirai: antras protas tavo ausyje</title>
+<meta name="description" content="Enkirai klauso pokalbio ir per ausinę šnabžda atsakymus bei užuominas, o po jo paruošia užrašus ir užduotis."><meta name="theme-color" content="#07080c">
+<meta property="og:title" content="Enkirai: antras protas tavo ausyje"><meta property="og:description" content="Enkirai klauso pokalbio ir per ausinę šnabžda atsakymus bei užuominas, o po jo paruošia užrašus ir užduotis.">
+<meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/lt/">
+<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><div class="wrap"><nav><a class="logo" href="/lt/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="on" href="/lt/">LT</a><a class="" href="/pl/">PL</a><a class="" href="/lv/">LV</a><a class="" href="/et/">ET</a></div></nav></div>
+<div class="wrap"><section class="hero"><div>
+<div class="eyebrow">Gyvo pokalbio asistentas</div><h1>Antras protas<br>tavo ausyje.</h1><p class="sub">Enkirai klauso susitikimo, skambučio ar derybų ir per ~1,7 sekundės pašnabžda atsakymą į ausinę. Po pokalbio užrašai ir užduotys jau paruošti.</p>
+<form id="w"><div class="row"><input type="email" name="email" required placeholder="Tavo el. paštas" autocomplete="email"><button>Užsirašyti</button></div>
+<label class="chk"><input type="checkbox" name="test">Noriu išbandyti pirmas</label><div class="msg" id="m" aria-live="polite"></div>
+<div class="soon">Netrukus Google Play</div></form></div>
+<div class="phone"><img src="/img/lt-hero.webp" alt="Enkirai"></div></section>
+<section class="grid"><div class="card"><h3>Atsakymai į ausį</h3><p>Kas nors paklausia klausimo, kainos ar fakto. Trumpas atsakymas tavo ausyje, kol pauzė dar nespėjo tapti nejauki.</p></div><div class="card"><h3>Užuominos, ne scenarijai</h3><p>Kai klausia apie tavo kainą ar patirtį, gauni kryptį iš tavo konteksto, keliais žodžiais.</p></div><div class="card"><h3>Suranda už tave</h3><p>Dukart bakstelk ausinę ir Enkirai ieško internete, kontaktuose ar kalendoriuje.</p></div><div class="card"><h3>Užrašai per 10 sekundžių</h3><p>Santrauka, sprendimai, užduotys su atsakingais ir terminais. Viską nukopijuoji vienu paspaudimu.</p></div></section>
+<section class="band"><div class="card"><h2>Kaip tai veikia</h2><ol><li>Padedi telefoną ant stalo, vieną ausinę į ausį.</li><li>Bakstelėji orbą arba paspaudi garsą aukštyn, tada žemyn.</li><li>Kalbi. Enkirai padeda tik tada, kai verta.</li></ol></div>
+<div class="card"><h2>5 kalbos</h2><p>Lietuvių, anglų, lenkų, latvių ir estų, net kai jos maišosi viename pokalbyje.</p></div>
+<div class="card"><h2>Privatumas pirmiausia</h2><p>Transkriptai lieka tavo telefone. Jokių reklamų, jokio duomenų pardavimo. Pasakyk pašnekovams, kad užrašus darai su AI.</p></div></section>
+<section class="shots"><img loading="lazy" src="/img/lt-1.webp" alt=""><img loading="lazy" src="/img/lt-2.webp" alt=""><img loading="lazy" src="/img/lt-3.webp" alt=""><img loading="lazy" src="/img/lt-4.webp" alt=""><img loading="lazy" src="/img/lt-5.webp" alt=""></section></div><div class="wrap"><footer><div><a href="/lt/privacy/">Privatumo politika</a><a href="/lt/terms/">Sąlygos</a><a href="/lt/delete/">Ištrinti paskyrą</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · m.labs produktas</div></footer></div><script>
+const f=document.getElementById('w'),m=document.getElementById('m');
+f.addEventListener('submit',async e=>{e.preventDefault();m.textContent='…';
+ try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{'apikey':'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Authorization':'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json','Prefer':'return=minimal'},
+ body:JSON.stringify({email:f.email.value.trim(),lang:'lt',wants_test:f.test.checked})});
+ m.textContent=r.ok?"Esi s\u0105ra\u0161e. Para\u0161ysim, kai bus paruo\u0161ta.":(r.status===409?"Tu jau esi s\u0105ra\u0161e.":"Ka\u017ekas nepavyko. Pabandyk dar kart\u0105.");if(r.ok)f.reset();}catch(_){m.textContent="Ka\u017ekas nepavyko. Pabandyk dar kart\u0105.";}});
+</script></body></html>

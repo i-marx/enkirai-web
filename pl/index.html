@@ -1,74 +1,51 @@
 <!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Enkirai: drugi umysł w twoim uchu</title>
-<meta name="description" content="Enkirai słucha rozmowy i szepcze odpowiedzi oraz wskazówki do słuchawki, a potem przygotowuje notatki i zadania."><meta name="theme-color" content="#07080c">
+<meta name="description" content="Enkirai słucha rozmowy i szepcze odpowiedzi oraz wskazówki do słuchawki, a potem przygotowuje notatki i zadania."><meta name="theme-color" content="#08080a">
 <meta property="og:title" content="Enkirai: drugi umysł w twoim uchu"><meta property="og:description" content="Enkirai słucha rozmowy i szepcze odpowiedzi oraz wskazówki do słuchawki, a potem przygotowuje notatki i zadania.">
-<meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/pl/">
-<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><canvas id="world" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i></i></div>
+<meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/pl/"><link rel="canonical" href="https://enkirai.com/pl/">
+<link rel="icon" href="../img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/">
+<link rel="preload" href="../fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site.css"></head><body>
+<canvas id="world" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i></i></div>
 <a class="skip" href="#main">Zapisz się</a>
-<header class="topbar" id="top"><nav><a class="logo" href="/pl/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="" href="/lt/">LT</a><a class="on" href="/pl/">PL</a><a class="" href="/lv/">LV</a><a class="" href="/et/">ET</a></div></nav></header>
+<header class="top"><div class="wrap"><a class="logo" href="../pl/"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l1.5 8.4L19 5l-3.4 5.5L24 12l-8.4 1.5L19 19l-5.5-3.4L12 24l-1.5-8.4L5 19l3.4-5.5L0 12l8.4-1.5L5 5l5.5 3.4z"/></svg>Enkirai</a>
+<nav class="langs" aria-label="Language"><a href="../" hreflang="en">EN</a><a href="../lt/" hreflang="lt">LT</a><a class=on aria-current=page href="../pl/" hreflang="pl">PL</a><a href="../lv/" hreflang="lv">LV</a><a href="../et/" hreflang="et">ET</a></nav><a class="btn sm" href="#join"><span>Zapisz się</span></a></div></header>
 <main id="main">
-<section class="scr" aria-label="Enkirai" data-shape="sphere" data-mesh="1"><div class="wrap hero2">
- <div><div class="eyebrow fade">Asystent rozmów na żywo</div><h1 data-split><span class="ln"><span>Drugi umysł</span></span><span class="ln"><span>w twoim <em class="s">uchu.</em></span></span></h1>
- <p class="sub fade d1">Enkirai słucha spotkania, rozmowy lub negocjacji i w ~1,7 sekundy szepcze odpowiedź do słuchawki. Po rozmowie notatki i zadania są gotowe.</p><div class="fade d2"><form id="w1" class="wl"><div class="row"><input type="email" name="email" required placeholder="Twój e-mail" autocomplete="email" aria-label="Twój e-mail"><button data-magnet>Zapisz się</button></div>
-<label class="chk"><input type="checkbox" name="test">Chcę testować jako pierwszy</label><div class="msg2" aria-live="polite"></div></form></div><div class="soon fade d3">Wkrótce w Google Play</div></div>
- <div class="orbstage" aria-hidden="true" data-anchor><div class="orbfx fallback"></div>
-  <div class="whisper idle"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><span class="w-txt"></span></div></div>
-</div><span class="scrollcue" aria-hidden="true"></span></section>
 
-<section class="scr" data-shape="wave" data-alpha=".5" data-dy="-2.3"><div class="wrap demo">
- <div class="rv"><h2 class="big">Odpowiedź w uchu, zanim pauza zrobi się niezręczna.</h2><p class="lead">Enkirai słyszy pytanie, decyduje, czy warto pomóc, i szepcze kilka słów do słuchawki. Około 1,7 sekundy od początku do końca.</p><div class="stats rv"><div><b data-count="1,7 s">1,7 s</b><span>od pytania do szeptu</span></div><div><b data-count="5">5</b><span>języków, można mieszać</span></div><div><b data-count="0">0</b><span>ekranów do patrzenia</span></div></div></div>
- <div class="device" id="dev" data-anchor><button class="demo-pause" id="dp" aria-label="Zatrzymaj" data-pause="Zatrzymaj" data-play="Odtwórz"><svg viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg></button>
-  <div class="screen"><div class="pill"><i></i>Enkirai · 12:34</div><div class="morb"></div>
-  <div class="mtip" id="mt"><small>W twoim uchu</small><span>…</span></div><div class="feed" id="fd"></div>
-  <div class="mctl"><span></span><span></span><span class="on"></span><span></span></div></div></div>
+<section class="hero" data-scene="hero" aria-label="Enkirai"><div class="wrap">
+ <div class="copy"><p class="eyebrow in">Asystent rozmów na żywo</p>
+ <h1><span class="ln"><span style="--i:0">Drugi umysł</span></span><span class="ln"><span style="--i:1">w twoim <em>uchu.</em></span></span></h1>
+ <p class="sub in" style="--i:2">Enkirai słucha spotkania, rozmowy lub negocjacji i w ~1,7 sekundy szepcze odpowiedź do słuchawki. Po rozmowie notatki i zadania są gotowe.</p><div class="in" style="--i:3"><form id="w1" class="wl" novalidate><div class="row"><input type="email" name="email" required placeholder="Twój e-mail" autocomplete="email" aria-label="Twój e-mail"><button class="btn" type="submit"><span>Zapisz się</span></button></div><label class="chk"><input type="checkbox" name="test"><span>Chcę testować jako pierwszy</span></label><div class="msg" aria-live="polite"></div></form></div><p class="soon in" style="--i:4">Wkrótce w Google Play</p></div>
+ <div class="stage" data-stage aria-hidden="true"><div class="fb orbfb"></div><div class="whisper idle"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><span class="w-txt"></span></div></div>
 </div></section>
 
-<section class="vmarq" aria-hidden="true"><div class="track">Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · </div><div class="track o">Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · Słucha · Myśli · Szepcze · </div></section>
-
-<section class="stmt" data-shape="galaxy" data-alpha=".42" aria-label="Zadają trudne pytanie. Ty już znasz odpowiedź i nikt nie widzi, że sprawdzałeś."><div class="stick"><div class="wrap"><p id="st"><span class="w">Zadają</span> <span class="w">trudne</span> <span class="w">pytanie.</span> <span class="w">Ty</span> <span class="w">już</span> <span class="w">znasz</span> <span class="w">odpowiedź</span> <span class="w">i</span> <span class="w">nikt</span> <span class="w">nie</span> <span class="w g">widzi,</span> <span class="w g">że</span> <span class="w g">sprawdzałeś.</span></p></div></div></section>
-
-<section class="scr" data-shape="star" data-alpha=".55" data-scale="1.25"><div class="wrap feat"><h2 class="big rv"><span>Co Enkirai robi za ciebie</span></h2><div class="fgrid rv" data-anchor><div class="fcard"><svg viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="13" width="4" height="7" rx="2"/><rect x="17" y="13" width="4" height="7" rx="2"/></svg><h3>Odpowiedzi w uchu</h3><p>Ktoś pyta o fakt, cenę, szczegół. Krótka odpowiedź jest w słuchawce, zanim pauza zrobi się niezręczna.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><path d="M12 3l2.4 5.6L20 9.3l-4.3 3.9 1.2 5.8L12 16.2 7.1 19l1.2-5.8L4 9.3l5.6-.7z"/></svg><h3>Wskazówki, nie scenariusze</h3><p>Gdy pytają o twoją cenę lub doświadczenie, dostajesz kierunek z twojego kontekstu, w kilku słowach.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><h3>Wyszukuje za ciebie</h3><p>Stuknij dwa razy słuchawkę, a Enkirai przeszuka internet, kontakty lub kalendarz.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg><h3>Notatki w 10 sekund</h3><p>Podsumowanie, decyzje, zadania z osobami i terminami. Wszystko kopiujesz jednym stuknięciem.</p></div></div></div></section>
-
-<section class="scr" data-shape="rings" data-alpha=".85"><div class="wrap notes">
- <div class="rv"><h2 class="big">Spotkanie się skończyło. Notatki są gotowe.</h2><p class="lead">Podsumowanie, decyzje, otwarte pytania i zadania z osobami i terminami, około dziesięciu sekund po zakończeniu. Jednym stuknięciem kopiujesz wszystko.</p></div>
- <div class="ncard" id="nc" data-anchor><div class="eb">Enkirai · 18:42</div><h4>Zamówienie blachy na dach</h4><div class="sum">Klient potrzebuje 200 m² blachy trapezowej. Uzgodniono 7,80 €/m², faktura dziś, dostawa w czwartek.</div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Wysłać fakturę dziś</span></div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Zamówić dostawę na czwartek</span></div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Potwierdzić ekipę montażową</span></div>
- <div class="copyall"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Kopiuj wszystko</div></div>
+<section class="split" data-scene="listen"><div class="wrap">
+ <div class="copy"><h2>Odpowiedź w uchu, zanim pauza zrobi się niezręczna.</h2><p class="lead">Enkirai słyszy pytanie, decyduje, czy warto pomóc, i szepcze kilka słów do słuchawki. Około 1,7 sekundy od początku do końca.</p><div class="stats"><div><b>1,7 s</b><span>od pytania do szeptu</span></div><div><b>5</b><span>języków, można mieszać</span></div><div><b>0</b><span>ekranów do patrzenia</span></div></div></div>
+ <div class="stage" data-stage><img class="fb" src="../img/pl-hero.webp" alt="Odpowiedzi w uchu" width="720" height="1560" loading="lazy" decoding="async"></div>
 </div></section>
 
-<section><div class="wrap band2 rv">
- <div class="fcard"><h3>5 języków</h3><p>Litewski, angielski, polski, łotewski i estoński, nawet gdy mieszają się w jednej rozmowie.</p><div class="marq" aria-hidden="true"><div><span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span></div></div></div>
- <div class="fcard"><h3>Prywatność od podstaw</h3><p>Transkrypcje zostają na twoim telefonie. Bez reklam, bez sprzedaży danych. Powiedz rozmówcom, że robisz notatki z AI.</p></div>
+<div class="marq" aria-hidden="true"><div class="track"><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i><span>Słucha</span><i></i><span>Myśli</span><i></i><span>Szepcze</span><i></i></div></div>
+
+<section class="stmt" data-scene="stmt" aria-label="Zadają trudne pytanie. Ty już znasz odpowiedź i nikt nie widzi, że sprawdzałeś."><div class="stick" data-stage><div class="wrap"><p id="st" aria-hidden="true"><span class="w">Zadają</span> <span class="w">trudne</span> <span class="w">pytanie.</span> <span class="w">Ty</span> <span class="w">już</span> <span class="w">znasz</span> <span class="w">odpowiedź</span> <span class="w">i</span> <span class="w">nikt</span> <span class="w">nie</span> <span class="w g">widzi,</span> <span class="w g">że</span> <span class="w g">sprawdzałeś.</span></p></div></div></section>
+
+<section class="feat" data-scene="feat"><div class="stick"><div class="wrap">
+ <div class="copy"><h2>Co Enkirai robi za ciebie</h2><ol class="steps"><li><button type="button" data-step="0"><span class="n">01</span><span class="t"><b>Odpowiedzi w uchu</b><span>Ktoś pyta o fakt, cenę, szczegół. Krótka odpowiedź jest w słuchawce, zanim pauza zrobi się niezręczna.</span></span></button></li><li><button type="button" data-step="1"><span class="n">02</span><span class="t"><b>Wskazówki, nie scenariusze</b><span>Gdy pytają o twoją cenę lub doświadczenie, dostajesz kierunek z twojego kontekstu, w kilku słowach.</span></span></button></li><li><button type="button" data-step="2"><span class="n">03</span><span class="t"><b>Wyszukuje za ciebie</b><span>Stuknij dwa razy słuchawkę, a Enkirai przeszuka internet, kontakty lub kalendarz.</span></span></button></li><li><button type="button" data-step="3"><span class="n">04</span><span class="t"><b>Notatki w 10 sekund</b><span>Podsumowanie, decyzje, zadania z osobami i terminami. Wszystko kopiujesz jednym stuknięciem.</span></span></button></li></ol></div>
+ <div class="stage" data-stage><img class="fb" src="../img/pl-2.webp" alt="Wskazówki, nie scenariusze" width="720" height="1560" loading="lazy" decoding="async"></div>
+</div></div></section>
+
+<section class="split rev" data-scene="notes"><div class="wrap">
+ <div class="copy"><h2>Spotkanie się skończyło. Notatki są gotowe.</h2><p class="lead">Podsumowanie, decyzje, otwarte pytania i zadania z osobami i terminami, około dziesięciu sekund po zakończeniu. Jednym stuknięciem kopiujesz wszystko.</p></div>
+ <div class="stage" data-stage><img class="fb" src="../img/pl-4.webp" alt="Notatki w 10 sekund" width="720" height="1560" loading="lazy" decoding="async"></div>
 </div></section>
 
-<section class="scr" data-shape="burst" data-alpha=".38" data-mesh="1.25"><div class="glow"></div><div class="wrap close2 rv"><h2 data-anchor>Usłysz to pierwszy.</h2><p class="lead">Zapisz się na listę oczekujących. Testerzy dostają wcześniejszy dostęp i rok za darmo.</p><form id="w2" class="wl"><div class="row"><input type="email" name="email" required placeholder="Twój e-mail" autocomplete="email" aria-label="Twój e-mail"><button data-magnet>Zapisz się</button></div>
-<label class="chk"><input type="checkbox" name="test">Chcę testować jako pierwszy</label><div class="msg2" aria-live="polite"></div></form><div class="soon">Wkrótce w Google Play</div></div></section>
-</main><div class="wrap"><footer><div><a href="/privacy/">Polityka prywatności</a><a href="/terms/">Warunki</a><a href="/delete/">Usuń konto</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · Produkt m.labs</div></footer></div>
-<script type="module">
-const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-// waitlist forms
-const OK="Jeste\u015b na li\u015bcie. Napiszemy, gdy b\u0119dzie gotowe.",DUP="Jeste\u015b ju\u017c na li\u015bcie.",ERR="Co\u015b posz\u0142o nie tak. Spr\u00f3buj ponownie.";
-document.querySelectorAll('form.wl').forEach(f=>f.addEventListener('submit',async ev=>{ev.preventDefault();const m=f.querySelector('.msg2');m.textContent='…';
- try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{apikey:'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4',Authorization:'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json',Prefer:'return=minimal'},
- body:JSON.stringify({email:f.email.value.trim(),lang:'pl',wants_test:f.test.checked})});m.textContent=r.ok?OK:(r.status===409?DUP:ERR);if(r.ok)f.reset();}catch(_){m.textContent=ERR;}}));
-// the conversation demo (phone) and the whisper under the orb share one script
-const C=[["Rozmówca 2", "Świetnie. A propos, partnerzy zadzwonią z Dubaju."], ["Rozmówca 2", "Która tam teraz jest godzina?"], ["ear", "W Dubaju jest 19:43"], ["Rozmówca 2", "A jaka jest wasza cena za metr?"], ["ear", "Powiedz 8,20 €, rabat od 300 m²"], ["Rozmówca 2", "Kiedy moglibyście dostarczyć?"], ["ear", "W czwartek, jeśli potwierdzą dziś"]],sleep=ms=>new Promise(r=>setTimeout(r,ms));
-const fd=document.getElementById('fd'),mt=document.querySelector('#mt span'),dev=document.getElementById('dev'),wh=document.querySelector('.whisper'),wt=wh.querySelector('.w-txt');
-let paused=RM,step=0;const dp=document.getElementById('dp');
-dp.onclick=()=>{paused=!paused;dp.setAttribute('aria-label',paused?dp.dataset.play:dp.dataset.pause);dp.innerHTML=paused?'<svg viewBox="0 0 16 16"><path d="M4 2l10 6-10 6z"/></svg>':'<svg viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>';};
-async function type(el,s){el.textContent='';for(const ch of s){el.textContent+=ch;await sleep(28);}}
-async function run(){
- if(RM){const last=C.filter(c=>c[0]==='ear');mt.textContent=last[0][1];wt.textContent=last[0][1];C.filter(c=>c[0]!=='ear').slice(0,3).forEach(c=>add(c));return;}
- for(;;){for(const [who,txt] of C){while(paused)await sleep(200);
-   if(who==='ear'){dev.classList.add('speaking');wh.classList.remove('idle');await Promise.all([type(mt,txt),type(wt,txt)]);await sleep(2200);dev.classList.remove('speaking');wh.classList.add('idle');}
-   else{add([who,txt]);await sleep(1500);}}
-  await sleep(1500);fd.innerHTML='';mt.textContent='…';}}
-function add([who,txt]){const d=document.createElement('div');d.className='bub';d.innerHTML='<small></small><span></span>';d.firstChild.textContent=who;d.lastChild.textContent=txt;fd.appendChild(d);while(fd.children.length>4)fd.firstChild.remove();}
-run();
-// the statement lights up word by word as it passes
-const st=document.getElementById('st'),ws=[...st.querySelectorAll('.w')],sec=st.closest('.stmt');
-function lit(){const r=sec.getBoundingClientRect(),p=Math.min(1,Math.max(0,(-r.top+innerHeight*.15)/(r.height-innerHeight*.9)));const n=Math.round(p*ws.length);ws.forEach((w,i)=>w.classList.toggle('on',RM||i<n));}
-addEventListener('scroll',lit,{passive:true});lit();
-// notes: tasks tick themselves off in a loop while the card is on screen
-const tk=[...document.querySelectorAll('.task')];let ti=0,vis=false;new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(document.getElementById('nc'));
-if(RM)tk.forEach(t=>t.classList.add('done'));else setInterval(()=>{if(!vis||paused)return;if(ti<tk.length)tk[ti++].classList.add('done');else{tk.forEach(t=>t.classList.remove('done'));ti=0;}},1100);
-</script><script type="module" src="/assets/site.js"></script></body></html>
+<section class="band"><div class="wrap">
+ <div class="card"><h3>5 języków</h3><p>Litewski, angielski, polski, łotewski i estoński, nawet gdy mieszają się w jednej rozmowie.</p><div class="lmarq" aria-hidden="true"><div><span>Lietuvių</span><span>English</span><span>Polski</span><span>Latviešu</span><span>Eesti</span><span>Lietuvių</span><span>English</span><span>Polski</span><span>Latviešu</span><span>Eesti</span><span>Lietuvių</span><span>English</span><span>Polski</span><span>Latviešu</span><span>Eesti</span><span>Lietuvių</span><span>English</span><span>Polski</span><span>Latviešu</span><span>Eesti</span></div></div></div>
+ <div class="card"><h3>Prywatność od podstaw</h3><p>Transkrypcje zostają na twoim telefonie. Bez reklam, bez sprzedaży danych. Powiedz rozmówcom, że robisz notatki z AI.</p></div>
+</div></section>
+
+<section class="close" id="join" data-scene="close"><div class="stage" data-stage aria-hidden="true"><div class="fb orbfb"></div></div><div class="wrap">
+ <h2>Usłysz to pierwszy.</h2><p class="lead">Zapisz się na listę oczekujących. Testerzy dostają wcześniejszy dostęp i rok za darmo.</p><form id="w2" class="wl" novalidate><div class="row"><input type="email" name="email" required placeholder="Twój e-mail" autocomplete="email" aria-label="Twój e-mail"><button class="btn" type="submit"><span>Zapisz się</span></button></div><label class="chk"><input type="checkbox" name="test"><span>Chcę testować jako pierwszy</span></label><div class="msg" aria-live="polite"></div></form><p class="soon">Wkrótce w Google Play</p>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="fl"><a href="https://enkirai.com/privacy/">Polityka prywatności</a><a href="https://enkirai.com/terms/">Warunki</a><a href="https://enkirai.com/delete/">Usuń konto</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a><span class="mail">hello@enkirai.com</span></div><div>© 2026 · Produkt m.labs</div></div></footer>
+<script>window.ENK={"lang": "pl", "ok": "Jesteś na liście. Napiszemy, gdy będzie gotowe.", "dup": "Jesteś już na liście.", "err": "Coś poszło nie tak. Spróbuj ponownie.", "ear": ["W Dubaju jest 19:43", "Powiedz 8,20 €, rabat od 300 m²", "W czwartek, jeśli potwierdzą dziś"], "screens": ["../img/pl-hero.webp", "../img/pl-2.webp", "../img/pl-3.webp", "../img/pl-4.webp", "../img/pl-5.webp"]}</script><script type="module" src="../assets/site.js"></script></body></html>

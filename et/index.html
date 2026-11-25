@@ -3,21 +3,76 @@
 <meta name="description" content="Enkirai kuulab vestlust ja sosistab vastuseid ning vihjeid kõrvaklappi, pärast koostab märkmed ja ülesanded."><meta name="theme-color" content="#07080c">
 <meta property="og:title" content="Enkirai: teine mõistus sinu kõrvas"><meta property="og:description" content="Enkirai kuulab vestlust ja sosistab vastuseid ning vihjeid kõrvaklappi, pärast koostab märkmed ja ülesanded.">
 <meta property="og:image" content="https://enkirai.com/img/og.png"><meta property="og:url" content="https://enkirai.com/et/">
-<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><div class="wrap"><nav><a class="logo" href="/et/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="" href="/lt/">LT</a><a class="" href="/pl/">PL</a><a class="" href="/lv/">LV</a><a class="on" href="/et/">ET</a></div></nav></div>
-<div class="wrap"><section class="hero"><div>
-<div class="eyebrow">Reaalajas vestlusabiline</div><h1>Teine mõistus<br>sinu kõrvas.</h1><p class="sub">Enkirai kuulab kohtumist, kõnet või läbirääkimisi ja sosistab ~1,7 sekundiga vastuse kõrvaklappi. Pärast vestlust on märkmed ja ülesanded valmis.</p>
-<form id="w"><div class="row"><input type="email" name="email" required placeholder="Sinu e-post" autocomplete="email"><button>Liitu ootenimekirjaga</button></div>
-<label class="chk"><input type="checkbox" name="test">Tahan esimesena testida</label><div class="msg" id="m" aria-live="polite"></div>
-<div class="soon">Peagi Google Plays</div></form></div>
-<div class="phone"><img src="/img/et-hero.webp" alt="Enkirai"></div></section>
-<section class="grid"><div class="card"><h3>Vastused kõrva</h3><p>Keegi küsib fakti, hinda, detaili. Lühike vastus on kõrvaklapis enne, kui paus muutub piinlikuks.</p></div><div class="card"><h3>Vihjed, mitte skriptid</h3><p>Kui küsitakse sinu hinna või kogemuse kohta, saad suuna oma kontekstist, mõne sõnaga.</p></div><div class="card"><h3>Otsib sinu eest</h3><p>Puuduta kõrvaklappi kaks korda ja Enkirai otsib internetist, kontaktidest või kalendrist.</p></div><div class="card"><h3>Märkmed 10 sekundiga</h3><p>Kokkuvõte, otsused, ülesanded vastutajate ja tähtaegadega. Kopeeri kõik ühe puudutusega.</p></div></section>
-<section class="band"><div class="card"><h2>Kuidas see töötab</h2><ol><li>Pane telefon lauale, üks kõrvaklapp kõrva.</li><li>Puuduta kera või vajuta helitugevust üles, siis alla.</li><li>Räägi. Enkirai aitab ainult siis, kui tasub.</li></ol></div>
-<div class="card"><h2>5 keelt</h2><p>Leedu, inglise, poola, läti ja eesti keel, isegi kui need ühes vestluses segunevad.</p></div>
-<div class="card"><h2>Privaatsus eelkõige</h2><p>Transkriptsioonid jäävad sinu telefoni. Reklaame pole, andmeid ei müüda. Ütle vestluskaaslastele, et teed märkmeid AI-ga.</p></div></section>
-<section class="shots"><img loading="lazy" src="/img/et-1.webp" alt=""><img loading="lazy" src="/img/et-2.webp" alt=""><img loading="lazy" src="/img/et-3.webp" alt=""><img loading="lazy" src="/img/et-4.webp" alt=""><img loading="lazy" src="/img/et-5.webp" alt=""></section></div><div class="wrap"><footer><div><a href="/privacy/">Privaatsuspoliitika</a><a href="/terms/">Tingimused</a><a href="/delete/">Kustuta konto</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · m.labs toode</div></footer></div><script>
-const f=document.getElementById('w'),m=document.getElementById('m');
-f.addEventListener('submit',async e=>{e.preventDefault();m.textContent='…';
- try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{'apikey':'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Authorization':'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json','Prefer':'return=minimal'},
- body:JSON.stringify({email:f.email.value.trim(),lang:'et',wants_test:f.test.checked})});
- m.textContent=r.ok?"Oled nimekirjas. Kirjutame, kui valmis.":(r.status===409?"Oled juba nimekirjas.":"Midagi l\u00e4ks valesti. Proovi uuesti.");if(r.ok)f.reset();}catch(_){m.textContent="Midagi l\u00e4ks valesti. Proovi uuesti.";}});
+<link rel="icon" href="/img/icon.png"><link rel="alternate" hreflang="en" href="https://enkirai.com/"><link rel="alternate" hreflang="lt" href="https://enkirai.com/lt/"><link rel="alternate" hreflang="pl" href="https://enkirai.com/pl/"><link rel="alternate" hreflang="lv" href="https://enkirai.com/lv/"><link rel="alternate" hreflang="et" href="https://enkirai.com/et/"><link rel="stylesheet" href="/style.css"></head><body><a class="skip" href="#main">Liitu ootenimekirjaga</a>
+<header class="topbar" id="top"><nav><a class="logo" href="/et/"><span class="orb"></span>Enkirai</a><div class="langs"><a class="" href="/">EN</a><a class="" href="/lt/">LT</a><a class="" href="/pl/">PL</a><a class="" href="/lv/">LV</a><a class="on" href="/et/">ET</a></div></nav></header>
+<main id="main">
+<section class="scr" aria-label="Enkirai"><div class="wrap hero2">
+ <div><div class="eyebrow fade">Reaalajas vestlusabiline</div><h1><span class="ln"><span>Teine mõistus</span></span><span class="ln"><span>sinu <em class="s">kõrvas.</em></span></span></h1>
+ <p class="sub fade d1">Enkirai kuulab kohtumist, kõnet või läbirääkimisi ja sosistab ~1,7 sekundiga vastuse kõrvaklappi. Pärast vestlust on märkmed ja ülesanded valmis.</p><div class="fade d2"><form id="w1" class="wl"><div class="row"><input type="email" name="email" required placeholder="Sinu e-post" autocomplete="email" aria-label="Sinu e-post"><button>Liitu ootenimekirjaga</button></div>
+<label class="chk"><input type="checkbox" name="test">Tahan esimesena testida</label><div class="msg2" aria-live="polite"></div></form></div><div class="soon fade d3">Peagi Google Plays</div></div>
+ <div class="orbstage" aria-hidden="true"><div class="orbfx" id="orb"></div>
+  <div class="whisper idle"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><span class="w-txt"></span></div></div>
+</div><span class="scrollcue" aria-hidden="true"></span></section>
+
+<section class="scr"><div class="wrap demo">
+ <div><h2 class="big">Vastus kõrvas enne, kui paus muutub piinlikuks.</h2><p class="lead">Enkirai kuuleb küsimust, otsustab, kas tasub aidata, ja sosistab mõne sõna kõrvaklappi. Umbes 1,7 sekundit algusest lõpuni.</p><div class="stats"><div><b>1,7 s</b><span>küsimusest sosinani</span></div><div><b>5</b><span>keelt, võib segada</span></div><div><b>0</b><span>ekraani, kuhu vaadata</span></div></div></div>
+ <div class="device" id="dev"><button class="demo-pause" id="dp" aria-label="Peata" data-pause="Peata" data-play="Esita"><svg viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg></button>
+  <div class="screen"><div class="pill"><i></i>Enkirai · 12:34</div><div class="morb"></div>
+  <div class="mtip" id="mt"><small>Sinu kõrvas</small><span>…</span></div><div class="feed" id="fd"></div>
+  <div class="mctl"><span></span><span></span><span class="on"></span><span></span></div></div></div>
+</div></section>
+
+<section class="stmt" aria-label="Nad esitavad raske küsimuse. Sa tead vastust juba ja keegi ei näe, et sa kontrollisid."><div class="stick"><div class="wrap"><p id="st"><span class="w">Nad</span> <span class="w">esitavad</span> <span class="w">raske</span> <span class="w">küsimuse.</span> <span class="w">Sa</span> <span class="w">tead</span> <span class="w">vastust</span> <span class="w">juba</span> <span class="w">ja</span> <span class="w">keegi</span> <span class="w">ei</span> <span class="w">näe,</span> <span class="w g">et</span> <span class="w g">sa</span> <span class="w g">kontrollisid.</span></p></div></div></section>
+
+<section class="scr"><div class="wrap feat"><h2 class="big">Mida Enkirai sinu eest teeb</h2><div class="fgrid"><div class="fcard"><svg viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="13" width="4" height="7" rx="2"/><rect x="17" y="13" width="4" height="7" rx="2"/></svg><h3>Vastused kõrva</h3><p>Keegi küsib fakti, hinda, detaili. Lühike vastus on kõrvaklapis enne, kui paus muutub piinlikuks.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><path d="M12 3l2.4 5.6L20 9.3l-4.3 3.9 1.2 5.8L12 16.2 7.1 19l1.2-5.8L4 9.3l5.6-.7z"/></svg><h3>Vihjed, mitte skriptid</h3><p>Kui küsitakse sinu hinna või kogemuse kohta, saad suuna oma kontekstist, mõne sõnaga.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><h3>Otsib sinu eest</h3><p>Puuduta kõrvaklappi kaks korda ja Enkirai otsib internetist, kontaktidest või kalendrist.</p></div><div class="fcard"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg><h3>Märkmed 10 sekundiga</h3><p>Kokkuvõte, otsused, ülesanded vastutajate ja tähtaegadega. Kopeeri kõik ühe puudutusega.</p></div></div></div></section>
+
+<section class="scr"><div class="wrap notes">
+ <div><h2 class="big">Kohtumine lõppes. Märkmed on valmis.</h2><p class="lead">Kokkuvõte, otsused, lahtised küsimused ja ülesanded vastutajate ning tähtaegadega umbes kümme sekundit pärast lõppu. Ühe puudutusega kopeerid kõik.</p></div>
+ <div class="ncard" id="nc"><div class="eb">Enkirai · 18:42</div><h4>Katuseplekkide tellimus</h4><div class="sum">Klient vajab 200 m² trapetsplekki. Kokku lepiti 7,80 €/m², arve täna, tarne neljapäeval.</div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Saata arve täna</span></div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Tellida tarne neljapäevaks</span></div><div class="task"><span class="box"><svg viewBox="0 0 12 12"><path d="M2.5 6.5l2.3 2.3L9.5 3.8"/></svg></span><span>Kinnitada paigaldusbrigaad</span></div>
+ <div class="copyall"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Kopeeri kõik</div></div>
+</div></section>
+
+<section><div class="wrap band2">
+ <div class="fcard"><h3>5 keelt</h3><p>Leedu, inglise, poola, läti ja eesti keel, isegi kui need ühes vestluses segunevad.</p><div class="marq" aria-hidden="true"><div><span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span> <span>Lietuvių</span> <span>English</span> <span>Polski</span> <span>Latviešu</span> <span>Eesti</span></div></div></div>
+ <div class="fcard"><h3>Privaatsus eelkõige</h3><p>Transkriptsioonid jäävad sinu telefoni. Reklaame pole, andmeid ei müüda. Ütle vestluskaaslastele, et teed märkmeid AI-ga.</p></div>
+</div></section>
+
+<section class="scr"><div class="glow"></div><div class="wrap close2"><h2>Kuule seda esimesena.</h2><p class="lead">Liitu ootenimekirjaga. Testijad saavad varajase ligipääsu ja aasta tasuta.</p><form id="w2" class="wl"><div class="row"><input type="email" name="email" required placeholder="Sinu e-post" autocomplete="email" aria-label="Sinu e-post"><button>Liitu ootenimekirjaga</button></div>
+<label class="chk"><input type="checkbox" name="test">Tahan esimesena testida</label><div class="msg2" aria-live="polite"></div></form><div class="soon">Peagi Google Plays</div></div></section>
+</main><div class="wrap"><footer><div><a href="/privacy/">Privaatsuspoliitika</a><a href="/terms/">Tingimused</a><a href="/delete/">Kustuta konto</a><a href="mailto:hello@enkirai.com">hello@enkirai.com</a></div><div>© 2026 · m.labs toode</div></footer></div>
+<script type="module">
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// header turns solid after the hero
+const tb=document.getElementById('top');addEventListener('scroll',()=>tb.classList.toggle('solid',scrollY>40),{passive:true});
+// the orb: live shader when WebGL is there, a painted orb otherwise
+const orb=document.getElementById('orb');
+import('/assets/effects/fx.js').then(m=>m.default.mount(orb,'orb-sphere',{palette:{bg:'#06070b',surface:'#11131b',ink:'#f3f1ec',muted:'#9a978f',accent:'#e8b45a',accentInk:'#1a1206'},seed:7,params:{speed:0.08,size:0.34,orbX:0.5,orbY:0.5,glow:0.5,pulse:0.25,calm:0,stars:90}})).catch(()=>orb.classList.add('fallback'));
+// waitlist forms
+const OK="Oled nimekirjas. Kirjutame, kui valmis.",DUP="Oled juba nimekirjas.",ERR="Midagi l\u00e4ks valesti. Proovi uuesti.";
+document.querySelectorAll('form.wl').forEach(f=>f.addEventListener('submit',async ev=>{ev.preventDefault();const m=f.querySelector('.msg2');m.textContent='…';
+ try{const r=await fetch('https://ohzczlfnhryktjsbmxpb.supabase.co/rest/v1/waitlist',{method:'POST',headers:{apikey:'sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4',Authorization:'Bearer sb_publishable_Wvf7fMkTCJuAI71hea7PEQ_25Q3-Xo4','Content-Type':'application/json',Prefer:'return=minimal'},
+ body:JSON.stringify({email:f.email.value.trim(),lang:'et',wants_test:f.test.checked})});m.textContent=r.ok?OK:(r.status===409?DUP:ERR);if(r.ok)f.reset();}catch(_){m.textContent=ERR;}}));
+// the conversation demo (phone) and the whisper under the orb share one script
+const C=[["Kõneleja 2", "Suurepärane. Muide, partnerid helistavad Dubaist."], ["Kõneleja 2", "Mis kell seal praegu on?"], ["ear", "Dubais on praegu 19:43"], ["Kõneleja 2", "Ja mis on teie ruutmeetri hind?"], ["ear", "Ütle 8,20 €, allahindlus alates 300 m²"], ["Kõneleja 2", "Millal saaksite tarnida?"], ["ear", "Neljapäeval, kui täna kinnitavad"]],sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const fd=document.getElementById('fd'),mt=document.querySelector('#mt span'),dev=document.getElementById('dev'),wh=document.querySelector('.whisper'),wt=wh.querySelector('.w-txt');
+let paused=RM,step=0;const dp=document.getElementById('dp');
+dp.onclick=()=>{paused=!paused;dp.setAttribute('aria-label',paused?dp.dataset.play:dp.dataset.pause);dp.innerHTML=paused?'<svg viewBox="0 0 16 16"><path d="M4 2l10 6-10 6z"/></svg>':'<svg viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>';};
+async function type(el,s){el.textContent='';for(const ch of s){el.textContent+=ch;await sleep(28);}}
+async function run(){
+ if(RM){const last=C.filter(c=>c[0]==='ear');mt.textContent=last[0][1];wt.textContent=last[0][1];C.filter(c=>c[0]!=='ear').slice(0,3).forEach(c=>add(c));return;}
+ for(;;){for(const [who,txt] of C){while(paused)await sleep(200);
+   if(who==='ear'){dev.classList.add('speaking');wh.classList.remove('idle');await Promise.all([type(mt,txt),type(wt,txt)]);await sleep(2200);dev.classList.remove('speaking');wh.classList.add('idle');}
+   else{add([who,txt]);await sleep(1500);}}
+  await sleep(1500);fd.innerHTML='';mt.textContent='…';}}
+function add([who,txt]){const d=document.createElement('div');d.className='bub';d.innerHTML='<small></small><span></span>';d.firstChild.textContent=who;d.lastChild.textContent=txt;fd.appendChild(d);while(fd.children.length>4)fd.firstChild.remove();}
+run();
+// the statement lights up word by word as it passes
+const st=document.getElementById('st'),ws=[...st.querySelectorAll('.w')],sec=st.closest('.stmt');
+function lit(){const r=sec.getBoundingClientRect(),p=Math.min(1,Math.max(0,(-r.top+innerHeight*.15)/(r.height-innerHeight*.9)));const n=Math.round(p*ws.length);ws.forEach((w,i)=>w.classList.toggle('on',RM||i<n));}
+addEventListener('scroll',lit,{passive:true});lit();
+// notes: tasks tick themselves off in a loop while the card is on screen
+const tk=[...document.querySelectorAll('.task')];let ti=0,vis=false;new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(document.getElementById('nc'));
+if(RM)tk.forEach(t=>t.classList.add('done'));else setInterval(()=>{if(!vis||paused)return;if(ti<tk.length)tk[ti++].classList.add('done');else{tk.forEach(t=>t.classList.remove('done'));ti=0;}},1100);
+// card glow follows the pointer
+document.querySelectorAll('.fcard').forEach(c=>c.addEventListener('pointermove',ev=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(ev.clientX-r.left)+'px');c.style.setProperty('--my',(ev.clientY-r.top)+'px');}));
 </script></body></html>
